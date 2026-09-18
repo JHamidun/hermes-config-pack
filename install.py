@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import shutil
 import sys
 from datetime import datetime
@@ -49,6 +50,7 @@ def _find_plugin_dir() -> Path:
 BUILD = _find_build()
 PLUGIN_SRC = _find_plugin_dir()
 PLUGIN_FILES = ["plugin.yaml", "__init__.py"]
+SKIP_DIRS = {".git", ".github", "__pycache__", "node_modules", ".pytest_cache"}
 
 
 def hermes_home() -> Path:
@@ -61,13 +63,55 @@ def hermes_home() -> Path:
     return Path.home() / ".hermes"
 
 
+CATEGORY_RE = re.compile(r"^\s*category:\s*([A-Za-z0-9._-]+)\s*$", re.M)
+
+
+def skill_category(skill_dir: Path) -> str:
+    """The category bucket this skill belongs in, from its own frontmatter.
+
+    The repository ships skills flat, because that is the only shape a Hermes
+    tap can enumerate. Installed, they have to sit in category directories: the
+    skills reference each other as `~/.hermes/skills/<category>/<name>/…`, and a
+    flat install would break every one of those links."""
+    md = skill_dir / "SKILL.md"
+    if md.exists():
+        try:
+            head = md.read_text(encoding="utf-8", errors="replace").split("\n---", 1)[0]
+            m = CATEGORY_RE.search(head)
+            if m:
+                return m.group(1)
+        except OSError:
+            pass
+    return "uncategorised"
+
+
+def repo_is_flat(src: Path) -> bool:
+    return (src / "skills").is_dir() and any((src / "skills").glob("*/SKILL.md"))
+
+
 def copy_tree(src: Path, dst: Path, *, repair: bool, dry: bool) -> tuple[int, int]:
     """Copy src over dst. Returns (written, skipped)."""
     written = skipped = 0
+    flat = repo_is_flat(src)
+    categories: dict[str, str] = {}
+    if flat:
+        for d in sorted((src / "skills").iterdir()):
+            if d.is_dir() and (d / "SKILL.md").exists():
+                categories[d.name] = skill_category(d)
     for p in sorted(src.rglob("*")):
         if p.is_dir():
             continue
-        target = dst / p.relative_to(src)
+        rel = p.relative_to(src)
+        # Installing from a git clone must not drag the repository into the pack
+        # home: a first run copied 11092 files instead of 4971, the difference
+        # being .git objects.
+        if SKIP_DIRS & set(rel.parts):
+            continue
+        if flat and rel.parts[0] == "skills" and len(rel.parts) >= 2:
+            cat = categories.get(rel.parts[1])
+            if cat:
+                rel = Path("skills", cat, *rel.parts[1:])
+        target = dst / rel
         if target.exists() and not repair:
             skipped += 1
             continue

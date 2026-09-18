@@ -12,6 +12,8 @@
 ## Быстрый старт
 
 ```bash
+git clone https://github.com/JHamidun/hermes-config-pack.git
+cd hermes-config-pack
 python install.py
 hermes plugins enable ccpack
 hermes ccpack install
@@ -19,6 +21,22 @@ hermes ccpack doctor
 ```
 
 Подробно, включая три шага, которые делаются руками — [INSTALL.md](INSTALL.md).
+
+## Или поштучно, без установки целиком
+
+Репозиторий работает и как источник навыков: `skills/` лежит в корне, а это то,
+что Hermes ждёт от tap.
+
+```bash
+hermes skills tap add JHamidun/hermes-config-pack
+hermes skills search pdf
+hermes skills install pdf
+```
+
+Так приедет один навык и его файлы — без ролей, CLI-инструментов и гарда: они
+живут в плагине и ставятся первым способом. Навыки, которые зовут скрипты пака
+(`~/.hermes/ccpack/tools/*.py`), в этом режиме честно скажут, что инструмента
+нет, — поставь пак целиком, если нужны они.
 
 ## Что внутри
 
