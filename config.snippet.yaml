@@ -1,0 +1,46 @@
+# config.snippet.yaml — что добавить в ~/.hermes/config.yaml
+#
+# `hermes ccpack install` дописывает только первый блок (skills.external_dirs).
+# Остальное — руками и осознанно: это про безопасность и деньги.
+
+skills:
+  external_dirs:
+    - ~/.hermes/ccpack/skills
+
+# --- защита от деструктивных команд ------------------------------------
+# Порт хука из пака: тот же разбор команды, тот же exit 2 = блок.
+# Нужен node на PATH. Выключатель — CC_HOOKS_OFF=1.
+hooks:
+  pre_tool_call:
+    - matcher: "terminal|process|write_file|patch"
+      command: "node ~/.hermes/ccpack/hooks/ccpack-guard.js"
+      timeout: 10
+      fail_closed: false   # хук — сетка безопасности, а не единственный барьер
+
+# --- делегирование ------------------------------------------------------
+# Роли пака рассчитаны на параллельную работу нескольких исполнителей.
+delegation:
+  max_concurrent_children: 10
+  max_spawn_depth: 1       # поднять до 2, если роль-оркестратор должна спавнить своих
+
+# --- MCP-серверы --------------------------------------------------------
+# Пак описывает их в config/mcp-servers.md. Синтаксис ${VAR} и ${env:VAR}
+# совместим с Claude/Cursor, значения — из ~/.hermes/.env.
+# mcp_servers:
+#   filesystem:
+#     command: npx
+#     args: ["-y", "@modelcontextprotocol/server-filesystem", "."]
+#   graph-memory:
+#     command: python
+#     args: ["${HOME}/.claude/mcps/graph-memory/server.py"]
+#     env:
+#       PYTHONIOENCODING: utf-8
+#       PYTHONUTF8: 1
+#   miro:
+#     url: https://mcp.miro.com/
+#   playwright-live1:
+#     command: npx
+#     args: ["@playwright/mcp@0.0.78", "--user-data-dir", "${HOME}/.claude/pw-profiles/live1"]
+#   runway:
+#     command: python
+#     args: ["-u", "${HOME}/.claude/skills/video-generation/scripts/runway_mcp.py"]

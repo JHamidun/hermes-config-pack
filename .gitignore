@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# filled in by the user, never shipped
+.env
+author-profile.md
+voice-sample.md
+business-context.md
+**/identity.local.json
+**/leak-scan-identity.json

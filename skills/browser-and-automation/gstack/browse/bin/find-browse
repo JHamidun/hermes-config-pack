@@ -1,0 +1,29 @@
+#!/bin/bash
+# Shim: delegates to compiled find-browse binary, falls back to basic discovery.
+# The compiled binary handles git root detection for workspace-local installs.
+DIR="$(cd "$(dirname "$0")/.." && pwd)/dist"
+if test -x "$DIR/find-browse"; then
+  exec "$DIR/find-browse" "$@"
+fi
+# Fallback: basic discovery
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+if [ -n "$ROOT" ] && test -x "$ROOT/.claude/skills/gstack/browse/dist/browse"; then
+  echo "$ROOT/.claude/skills/gstack/browse/dist/browse"
+elif test -x "~/.hermes/skills/browser-and-automation/gstack/browse/dist/browse"; then
+  echo "~/.hermes/skills/browser-and-automation/gstack/browse/dist/browse"
+else
+  # Раньше здесь стояло буквальное "<skill-dir>" — подставить его было некому, и
+  # человек оставался с указанием, которое нельзя выполнить. Печатаем настоящий путь
+  # и главное условие: бинарь собирает Bun, npm этого не умеет.
+  GS="$(cd "$(dirname "$0")/../.." && pwd)"
+  {
+    echo "ERROR: бинарь browse не собран — gstack работать не будет."
+    echo "  Собери:  cd \"$GS\" && bash ./setup"
+    if ! command -v bun >/dev/null 2>&1; then
+      echo "  Сначала поставь Bun (без него сборка невозможна, npm её не заменяет):"
+      echo "    macOS/Linux: curl -fsSL https://bun.sh/install | bash"
+      echo "    Windows:     powershell -c \"irm bun.sh/install.ps1 | iex\""
+    fi
+  } >&2
+  exit 1
+fi

@@ -1,0 +1,11 @@
+name: ccpack
+version: "1.0.0"
+description: >-
+  Config pack for Hermes, converted from the Claude Code configuration pack.
+  ~420 skills (each one a slash command), 74 subagent roles loaded with
+  skill_view, the pack's Python CLIs under ~/.hermes/ccpack/tools, and the
+  destructive-command guard as a shell hook. Python 3.11+ for the CLIs.
+author: "Claude Code config pack (upstream) · Hermes port"
+provides_tools: []
+provides_hooks:
+  - on_session_start

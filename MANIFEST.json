@@ -1,0 +1,3151 @@
+{
+ "source": "claude-code-config-pack",
+ "counts": {
+  "skills": 315,
+  "commands": 98,
+  "agents": 74,
+  "nested": 11,
+  "nested_ignored": 21,
+  "trees": {
+   "tools": 29,
+   "scripts": 17,
+   "config": 31,
+   "rules": 19,
+   "templates": 10,
+   "docs": 8,
+   "workflows": 12,
+   "schemas": 5,
+   "prompts": 2
+  }
+ },
+ "rewrites": {
+  "tools": 789,
+  "path:skills/<name>": 455,
+  "path:tools": 323,
+  "path:bare-home": 319,
+  "mcp": 233,
+  "path:credentials-file": 198,
+  "path:templates": 103,
+  "bare:credentials-file": 102,
+  "path:scripts": 70,
+  "py:Path.home()/.claude": 54,
+  "path:gsd-engine": 51,
+  "py:home-credentials": 35,
+  "path:projects/<p>/memory": 29,
+  "py:expanduser-credentials": 24,
+  "path:config": 22,
+  "path:skills": 18,
+  "path:projects": 14,
+  "path:memory-graph": 13,
+  "path:plugins": 11,
+  "path:.claude.json": 9,
+  "path:chats.db": 8,
+  "path:mcps": 8,
+  "path:rules": 7,
+  "path:settings.json": 4,
+  "path:hooks": 3,
+  "path:workflows": 3,
+  "bare:credentials-json": 1,
+  "path:prompts": 1,
+  "path:CLAUDE.md": 1
+ },
+ "items": [
+  {
+   "kind": "skill",
+   "name": "a11y-audit",
+   "category": "code-quality-and-review",
+   "slash": "/a11y-audit"
+  },
+  {
+   "kind": "skill",
+   "name": "ab-testing-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/ab-testing-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "account-research",
+   "category": "sales-and-crm",
+   "slash": "/account-research"
+  },
+  {
+   "kind": "skill",
+   "name": "ace-step",
+   "category": "audio-and-speech",
+   "slash": "/ace-step"
+  },
+  {
+   "kind": "skill",
+   "name": "ad-benchmarks-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/ad-benchmarks-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "ad-spy",
+   "category": "advertising-and-paid-media",
+   "slash": "/ad-spy"
+  },
+  {
+   "kind": "skill",
+   "name": "agent-api-server",
+   "category": "integrations-and-apis",
+   "slash": "/agent-api-server"
+  },
+  {
+   "kind": "skill",
+   "name": "ai-creative-factory-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/ai-creative-factory-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "ai-marketing-stack-ru",
+   "category": "marketing",
+   "slash": "/ai-marketing-stack-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "ai-seo-agent-pipeline",
+   "category": "marketing",
+   "slash": "/ai-seo-agent-pipeline"
+  },
+  {
+   "kind": "skill",
+   "name": "algorithmic-art",
+   "category": "design-and-ui",
+   "slash": "/algorithmic-art"
+  },
+  {
+   "kind": "skill",
+   "name": "animations",
+   "category": "design-and-ui",
+   "slash": "/animations"
+  },
+  {
+   "kind": "skill",
+   "name": "api-documentation",
+   "category": "development",
+   "slash": "/api-documentation"
+  },
+  {
+   "kind": "skill",
+   "name": "apify-scraping",
+   "category": "browser-and-automation",
+   "slash": "/apify-scraping"
+  },
+  {
+   "kind": "skill",
+   "name": "apple-developer",
+   "category": "devops-and-infrastructure",
+   "slash": "/apple-developer"
+  },
+  {
+   "kind": "skill",
+   "name": "article-pipeline",
+   "category": "writing-and-communication",
+   "slash": "/article-pipeline"
+  },
+  {
+   "kind": "skill",
+   "name": "author-voice",
+   "category": "writing-and-communication",
+   "slash": "/author-voice"
+  },
+  {
+   "kind": "skill",
+   "name": "autocad-com",
+   "category": "integrations-and-apis",
+   "slash": "/autocad-com"
+  },
+  {
+   "kind": "skill",
+   "name": "autonomous-agent-creator",
+   "category": "agent-and-skill-development",
+   "slash": "/autonomous-agent-creator"
+  },
+  {
+   "kind": "skill",
+   "name": "away-summary",
+   "category": "memory-and-knowledge",
+   "slash": "/away-summary"
+  },
+  {
+   "kind": "skill",
+   "name": "aws-skills",
+   "category": "devops-and-infrastructure",
+   "slash": "/aws-skills"
+  },
+  {
+   "kind": "skill",
+   "name": "b2b-marketing-ru",
+   "category": "marketing",
+   "slash": "/b2b-marketing-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "beads",
+   "category": "planning-and-execution",
+   "slash": "/beads"
+  },
+  {
+   "kind": "skill",
+   "name": "book-mentions-monitor",
+   "category": "marketing",
+   "slash": "/book-mentions-monitor"
+  },
+  {
+   "kind": "skill",
+   "name": "book-polish-pipeline",
+   "category": "writing-and-communication",
+   "slash": "/book-polish-pipeline"
+  },
+  {
+   "kind": "skill",
+   "name": "book-post",
+   "category": "writing-and-communication",
+   "slash": "/book-post"
+  },
+  {
+   "kind": "skill",
+   "name": "brand-extractor",
+   "category": "design-and-ui",
+   "slash": "/brand-extractor"
+  },
+  {
+   "kind": "skill",
+   "name": "brand-guidelines",
+   "category": "design-and-ui",
+   "slash": "/brand-guidelines"
+  },
+  {
+   "kind": "skill",
+   "name": "brand-voice",
+   "category": "marketing",
+   "slash": "/brand-voice"
+  },
+  {
+   "kind": "skill",
+   "name": "btw",
+   "category": "thinking-and-methodology",
+   "slash": "/btw"
+  },
+  {
+   "kind": "skill",
+   "name": "build-fix",
+   "category": "development",
+   "slash": "/build-fix"
+  },
+  {
+   "kind": "skill",
+   "name": "building-an-exo",
+   "category": "thinking-and-methodology",
+   "slash": "/building-an-exo"
+  },
+  {
+   "kind": "skill",
+   "name": "call-prep",
+   "category": "sales-and-crm",
+   "slash": "/call-prep"
+  },
+  {
+   "kind": "skill",
+   "name": "campaign-planning",
+   "category": "marketing",
+   "slash": "/campaign-planning"
+  },
+  {
+   "kind": "skill",
+   "name": "canonical-html",
+   "category": "prototyping-and-web-build",
+   "slash": "/canonical-html"
+  },
+  {
+   "kind": "skill",
+   "name": "canvas-design",
+   "category": "design-and-ui",
+   "slash": "/canvas-design"
+  },
+  {
+   "kind": "skill",
+   "name": "capi-no-code-setup",
+   "category": "advertising-and-paid-media",
+   "slash": "/capi-no-code-setup"
+  },
+  {
+   "kind": "skill",
+   "name": "cards-creator",
+   "category": "design-and-ui",
+   "slash": "/cards-creator"
+  },
+  {
+   "kind": "skill",
+   "name": "career-ops",
+   "category": "planning-and-execution",
+   "slash": "/career-ops"
+  },
+  {
+   "kind": "skill",
+   "name": "ceo-council",
+   "category": "thinking-and-methodology",
+   "slash": "/ceo-council"
+  },
+  {
+   "kind": "skill",
+   "name": "changelog-generator",
+   "category": "git-and-workflow",
+   "slash": "/changelog-generator"
+  },
+  {
+   "kind": "skill",
+   "name": "check-skill-solo",
+   "category": "thinking-and-methodology",
+   "slash": "/check-skill-solo"
+  },
+  {
+   "kind": "skill",
+   "name": "churn-prevention-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/churn-prevention-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "citp-research-ru",
+   "category": "marketing",
+   "slash": "/citp-research-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "claude-api",
+   "category": "integrations-and-apis",
+   "slash": "/claude-api"
+  },
+  {
+   "kind": "skill",
+   "name": "claude-cli-runner",
+   "category": "integrations-and-apis",
+   "slash": "/claude-cli-runner"
+  },
+  {
+   "kind": "skill",
+   "name": "claude-design",
+   "category": "design-and-ui",
+   "slash": "/claude-design"
+  },
+  {
+   "kind": "skill",
+   "name": "claude-in-html",
+   "category": "prototyping-and-web-build",
+   "slash": "/claude-in-html"
+  },
+  {
+   "kind": "skill",
+   "name": "claude-server-auth",
+   "category": "devops-and-infrastructure",
+   "slash": "/claude-server-auth"
+  },
+  {
+   "kind": "skill",
+   "name": "codegraph",
+   "category": "development",
+   "slash": "/codegraph"
+  },
+  {
+   "kind": "skill",
+   "name": "color-system-builder",
+   "category": "design-and-ui",
+   "slash": "/color-system-builder"
+  },
+  {
+   "kind": "skill",
+   "name": "comment-injector",
+   "category": "prototyping-and-web-build",
+   "slash": "/comment-injector"
+  },
+  {
+   "kind": "skill",
+   "name": "comment-replies",
+   "category": "writing-and-communication",
+   "slash": "/comment-replies"
+  },
+  {
+   "kind": "skill",
+   "name": "comparison-mode",
+   "category": "design-and-ui",
+   "slash": "/comparison-mode"
+  },
+  {
+   "kind": "skill",
+   "name": "competitive-analysis",
+   "category": "product-management",
+   "slash": "/competitive-analysis"
+  },
+  {
+   "kind": "skill",
+   "name": "competitive-analysis-mktg",
+   "category": "marketing",
+   "slash": "/competitive-analysis-mktg"
+  },
+  {
+   "kind": "skill",
+   "name": "competitive-intelligence",
+   "category": "sales-and-crm",
+   "slash": "/competitive-intelligence"
+  },
+  {
+   "kind": "skill",
+   "name": "component-playground",
+   "category": "prototyping-and-web-build",
+   "slash": "/component-playground"
+  },
+  {
+   "kind": "skill",
+   "name": "content-creation",
+   "category": "marketing",
+   "slash": "/content-creation"
+  },
+  {
+   "kind": "skill",
+   "name": "content-engine",
+   "category": "marketing",
+   "slash": "/content-engine"
+  },
+  {
+   "kind": "skill",
+   "name": "content-machine-ru",
+   "category": "marketing",
+   "slash": "/content-machine-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "content-policy",
+   "category": "design-and-ui",
+   "slash": "/content-policy"
+  },
+  {
+   "kind": "skill",
+   "name": "content-research",
+   "category": "writing-and-communication",
+   "slash": "/content-research"
+  },
+  {
+   "kind": "skill",
+   "name": "content-rules",
+   "category": "design-and-ui",
+   "slash": "/content-rules"
+  },
+  {
+   "kind": "skill",
+   "name": "context-engineering",
+   "category": "agent-and-skill-development",
+   "slash": "/context-engineering"
+  },
+  {
+   "kind": "skill",
+   "name": "cookbook",
+   "category": "design-and-ui",
+   "slash": "/cookbook"
+  },
+  {
+   "kind": "skill",
+   "name": "create-an-asset",
+   "category": "sales-and-crm",
+   "slash": "/create-an-asset"
+  },
+  {
+   "kind": "skill",
+   "name": "critique-mode",
+   "category": "design-and-ui",
+   "slash": "/critique-mode"
+  },
+  {
+   "kind": "skill",
+   "name": "csv-analysis",
+   "category": "analytics-and-data",
+   "slash": "/csv-analysis"
+  },
+  {
+   "kind": "skill",
+   "name": "d3-visualization",
+   "category": "prototyping-and-web-build",
+   "slash": "/d3-visualization"
+  },
+  {
+   "kind": "skill",
+   "name": "daily-briefing",
+   "category": "sales-and-crm",
+   "slash": "/daily-briefing"
+  },
+  {
+   "kind": "skill",
+   "name": "dark-mode-add",
+   "category": "design-and-ui",
+   "slash": "/dark-mode-add"
+  },
+  {
+   "kind": "skill",
+   "name": "database-design",
+   "category": "development",
+   "slash": "/database-design"
+  },
+  {
+   "kind": "skill",
+   "name": "de-ai-ify",
+   "category": "writing-and-communication",
+   "slash": "/de-ai-ify"
+  },
+  {
+   "kind": "skill",
+   "name": "deck-themes",
+   "category": "presentations",
+   "slash": "/deck-themes"
+  },
+  {
+   "kind": "skill",
+   "name": "deepgram",
+   "category": "audio-and-speech",
+   "slash": "/deepgram"
+  },
+  {
+   "kind": "skill",
+   "name": "deepl-pro",
+   "category": "integrations-and-apis",
+   "slash": "/deepl-pro"
+  },
+  {
+   "kind": "skill",
+   "name": "deepseek",
+   "category": "integrations-and-apis",
+   "slash": "/deepseek"
+  },
+  {
+   "kind": "skill",
+   "name": "deepwiki",
+   "category": "development",
+   "slash": "/deepwiki"
+  },
+  {
+   "kind": "skill",
+   "name": "design-canvas",
+   "category": "design-and-ui",
+   "slash": "/design-canvas"
+  },
+  {
+   "kind": "skill",
+   "name": "design-guardrails",
+   "category": "design-and-ui",
+   "slash": "/design-guardrails"
+  },
+  {
+   "kind": "skill",
+   "name": "design-guide",
+   "category": "design-and-ui",
+   "slash": "/design-guide"
+  },
+  {
+   "kind": "skill",
+   "name": "design-md-brands",
+   "category": "design-and-ui",
+   "slash": "/design-md-brands"
+  },
+  {
+   "kind": "skill",
+   "name": "design-orchestrator",
+   "category": "design-and-ui",
+   "slash": "/design-orchestrator"
+  },
+  {
+   "kind": "skill",
+   "name": "design-system-create",
+   "category": "design-and-ui",
+   "slash": "/design-system-create"
+  },
+  {
+   "kind": "skill",
+   "name": "design-taste",
+   "category": "design-and-ui",
+   "slash": "/design-taste"
+  },
+  {
+   "kind": "skill",
+   "name": "design-tokens-w3c",
+   "category": "design-and-ui",
+   "slash": "/design-tokens-w3c"
+  },
+  {
+   "kind": "skill",
+   "name": "dev-browser",
+   "category": "browser-and-automation",
+   "slash": "/dev-browser"
+  },
+  {
+   "kind": "skill",
+   "name": "dev-handoff",
+   "category": "design-and-ui",
+   "slash": "/dev-handoff"
+  },
+  {
+   "kind": "skill",
+   "name": "developer-growth",
+   "category": "planning-and-execution",
+   "slash": "/developer-growth"
+  },
+  {
+   "kind": "skill",
+   "name": "device-frames",
+   "category": "design-and-ui",
+   "slash": "/device-frames"
+  },
+  {
+   "kind": "skill",
+   "name": "did",
+   "category": "video-and-media",
+   "slash": "/did"
+  },
+  {
+   "kind": "skill",
+   "name": "doc-coauthoring",
+   "category": "writing-and-communication",
+   "slash": "/doc-coauthoring"
+  },
+  {
+   "kind": "skill",
+   "name": "document-import",
+   "category": "documents-and-office",
+   "slash": "/document-import"
+  },
+  {
+   "kind": "skill",
+   "name": "docx",
+   "category": "documents-and-office",
+   "slash": "/docx"
+  },
+  {
+   "kind": "skill",
+   "name": "domain-brainstormer",
+   "category": "writing-and-communication",
+   "slash": "/domain-brainstormer"
+  },
+  {
+   "kind": "skill",
+   "name": "draft-outreach",
+   "category": "sales-and-crm",
+   "slash": "/draft-outreach"
+  },
+  {
+   "kind": "skill",
+   "name": "dream",
+   "category": "memory-and-knowledge",
+   "slash": "/dream"
+  },
+  {
+   "kind": "skill",
+   "name": "edit-banana",
+   "category": "documents-and-office",
+   "slash": "/edit-banana"
+  },
+  {
+   "kind": "skill",
+   "name": "elevenlabs",
+   "category": "audio-and-speech",
+   "slash": "/elevenlabs"
+  },
+  {
+   "kind": "skill",
+   "name": "email-imap",
+   "category": "integrations-and-apis",
+   "slash": "/email-imap"
+  },
+  {
+   "kind": "skill",
+   "name": "emil-design-eng",
+   "category": "design-and-ui",
+   "slash": "/emil-design-eng"
+  },
+  {
+   "kind": "skill",
+   "name": "epub-tools",
+   "category": "documents-and-office",
+   "slash": "/epub-tools"
+  },
+  {
+   "kind": "skill",
+   "name": "excalidraw-flowchart",
+   "category": "design-and-ui",
+   "slash": "/excalidraw-flowchart"
+  },
+  {
+   "kind": "skill",
+   "name": "export-pdf",
+   "category": "documents-and-office",
+   "slash": "/export-pdf"
+  },
+  {
+   "kind": "skill",
+   "name": "export-png",
+   "category": "design-and-ui",
+   "slash": "/export-png"
+  },
+  {
+   "kind": "skill",
+   "name": "export-pptx",
+   "category": "presentations",
+   "slash": "/export-pptx"
+  },
+  {
+   "kind": "skill",
+   "name": "feature-spec",
+   "category": "product-management",
+   "slash": "/feature-spec"
+  },
+  {
+   "kind": "skill",
+   "name": "figma-api",
+   "category": "integrations-and-apis",
+   "slash": "/figma-api"
+  },
+  {
+   "kind": "skill",
+   "name": "file-converter",
+   "category": "documents-and-office",
+   "slash": "/file-converter"
+  },
+  {
+   "kind": "skill",
+   "name": "file-organizer",
+   "category": "documents-and-office",
+   "slash": "/file-organizer"
+  },
+  {
+   "kind": "skill",
+   "name": "fonts-bundle",
+   "category": "design-and-ui",
+   "slash": "/fonts-bundle"
+  },
+  {
+   "kind": "skill",
+   "name": "form-cro-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/form-cro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "forms-a11y",
+   "category": "prototyping-and-web-build",
+   "slash": "/forms-a11y"
+  },
+  {
+   "kind": "skill",
+   "name": "free-tools-lead-magnets-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/free-tools-lead-magnets-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "frontend-design",
+   "category": "design-and-ui",
+   "slash": "/frontend-design"
+  },
+  {
+   "kind": "skill",
+   "name": "full-funnel-analytics-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/full-funnel-analytics-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "funnel-design-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/funnel-design-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "gamma",
+   "category": "presentations",
+   "slash": "/gamma"
+  },
+  {
+   "kind": "skill",
+   "name": "gemini-3-pro",
+   "category": "integrations-and-apis",
+   "slash": "/gemini-3-pro"
+  },
+  {
+   "kind": "skill",
+   "name": "generate-report-header",
+   "category": "agent-and-skill-development",
+   "slash": "/generate-report-header"
+  },
+  {
+   "kind": "skill",
+   "name": "geo-aeo-ru",
+   "category": "marketing",
+   "slash": "/geo-aeo-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "git-workflow",
+   "category": "git-and-workflow",
+   "slash": "/git-workflow"
+  },
+  {
+   "kind": "skill",
+   "name": "github-gem-seeker",
+   "category": "development",
+   "slash": "/github-gem-seeker"
+  },
+  {
+   "kind": "skill",
+   "name": "github-import",
+   "category": "design-and-ui",
+   "slash": "/github-import"
+  },
+  {
+   "kind": "skill",
+   "name": "google-ads-pro-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/google-ads-pro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "google-workspace",
+   "category": "integrations-and-apis",
+   "slash": "/google-workspace"
+  },
+  {
+   "kind": "skill",
+   "name": "graph-memory",
+   "category": "memory-and-knowledge",
+   "slash": "/graph-memory"
+  },
+  {
+   "kind": "skill",
+   "name": "gstack",
+   "category": "browser-and-automation",
+   "slash": "/gstack"
+  },
+  {
+   "kind": "skill",
+   "name": "habr-post",
+   "category": "writing-and-communication",
+   "slash": "/habr-post"
+  },
+  {
+   "kind": "skill",
+   "name": "health-inline",
+   "category": "code-quality-and-review",
+   "slash": "/health-inline"
+  },
+  {
+   "kind": "skill",
+   "name": "heygen",
+   "category": "video-and-media",
+   "slash": "/heygen"
+  },
+  {
+   "kind": "skill",
+   "name": "home-assistant",
+   "category": "integrations-and-apis",
+   "slash": "/home-assistant"
+  },
+  {
+   "kind": "skill",
+   "name": "html-email",
+   "category": "prototyping-and-web-build",
+   "slash": "/html-email"
+  },
+  {
+   "kind": "skill",
+   "name": "i18n-stress-test",
+   "category": "code-quality-and-review",
+   "slash": "/i18n-stress-test"
+  },
+  {
+   "kind": "skill",
+   "name": "image-enhancer",
+   "category": "video-and-media",
+   "slash": "/image-enhancer"
+  },
+  {
+   "kind": "skill",
+   "name": "image-generation",
+   "category": "video-and-media",
+   "slash": "/image-generation"
+  },
+  {
+   "kind": "skill",
+   "name": "influencer-buying-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/influencer-buying-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "installer-builder",
+   "category": "devops-and-infrastructure",
+   "slash": "/installer-builder"
+  },
+  {
+   "kind": "skill",
+   "name": "interactive-prototype",
+   "category": "prototyping-and-web-build",
+   "slash": "/interactive-prototype"
+  },
+  {
+   "kind": "skill",
+   "name": "internal-comms",
+   "category": "writing-and-communication",
+   "slash": "/internal-comms"
+  },
+  {
+   "kind": "skill",
+   "name": "investor-materials",
+   "category": "sales-and-crm",
+   "slash": "/investor-materials"
+  },
+  {
+   "kind": "skill",
+   "name": "invoice-organizer",
+   "category": "documents-and-office",
+   "slash": "/invoice-organizer"
+  },
+  {
+   "kind": "skill",
+   "name": "javascript-typescript-dev",
+   "category": "development",
+   "slash": "/javascript-typescript-dev"
+  },
+  {
+   "kind": "skill",
+   "name": "jtbd",
+   "category": "product-management",
+   "slash": "/jtbd"
+  },
+  {
+   "kind": "skill",
+   "name": "kimi",
+   "category": "integrations-and-apis",
+   "slash": "/kimi"
+  },
+  {
+   "kind": "skill",
+   "name": "landing-page-effects",
+   "category": "design-and-ui",
+   "slash": "/landing-page-effects"
+  },
+  {
+   "kind": "skill",
+   "name": "last30days",
+   "category": "analytics-and-data",
+   "slash": "/last30days"
+  },
+  {
+   "kind": "skill",
+   "name": "launch-strategy-ru",
+   "category": "marketing",
+   "slash": "/launch-strategy-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "lead-research",
+   "category": "sales-and-crm",
+   "slash": "/lead-research"
+  },
+  {
+   "kind": "skill",
+   "name": "leak-scan",
+   "category": "security",
+   "slash": "/leak-scan"
+  },
+  {
+   "kind": "skill",
+   "name": "license-check",
+   "category": "code-quality-and-review",
+   "slash": "/license-check"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin",
+   "category": "sales-and-crm",
+   "slash": "/linkedin"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin-comment-drafter",
+   "category": "writing-and-communication",
+   "slash": "/linkedin-comment-drafter"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin-employee-advocacy",
+   "category": "marketing",
+   "slash": "/linkedin-employee-advocacy"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin-humanizer",
+   "category": "writing-and-communication",
+   "slash": "/linkedin-humanizer"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin-post-author",
+   "category": "writing-and-communication",
+   "slash": "/linkedin-post-author"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin-post-writer",
+   "category": "writing-and-communication",
+   "slash": "/linkedin-post-writer"
+  },
+  {
+   "kind": "skill",
+   "name": "linkedin-profile-optimizer",
+   "category": "writing-and-communication",
+   "slash": "/linkedin-profile-optimizer"
+  },
+  {
+   "kind": "skill",
+   "name": "live-preview",
+   "category": "prototyping-and-web-build",
+   "slash": "/live-preview"
+  },
+  {
+   "kind": "skill",
+   "name": "llm-evals",
+   "category": "agent-and-skill-development",
+   "slash": "/llm-evals"
+  },
+  {
+   "kind": "skill",
+   "name": "manus",
+   "category": "integrations-and-apis",
+   "slash": "/manus"
+  },
+  {
+   "kind": "skill",
+   "name": "manus-slides",
+   "category": "presentations",
+   "slash": "/manus-slides"
+  },
+  {
+   "kind": "skill",
+   "name": "manychat-funnel-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/manychat-funnel-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "maps-places",
+   "category": "integrations-and-apis",
+   "slash": "/maps-places"
+  },
+  {
+   "kind": "skill",
+   "name": "market-selection-ru",
+   "category": "marketing",
+   "slash": "/market-selection-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "marketing-decisions-ru",
+   "category": "marketing",
+   "slash": "/marketing-decisions-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "marketing-loops-ru",
+   "category": "marketing",
+   "slash": "/marketing-loops-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "marketing-masterminds-ru",
+   "category": "marketing",
+   "slash": "/marketing-masterminds-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "marketing-orchestrator",
+   "category": "marketing",
+   "slash": "/marketing-orchestrator"
+  },
+  {
+   "kind": "skill",
+   "name": "marketing-psychology-ru",
+   "category": "marketing",
+   "slash": "/marketing-psychology-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "marketing-team-builder-ru",
+   "category": "marketing",
+   "slash": "/marketing-team-builder-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "marp-presentations",
+   "category": "presentations",
+   "slash": "/marp-presentations"
+  },
+  {
+   "kind": "skill",
+   "name": "mcp-builder",
+   "category": "agent-and-skill-development",
+   "slash": "/mcp-builder"
+  },
+  {
+   "kind": "skill",
+   "name": "media-planning-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/media-planning-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "meeting-analyzer",
+   "category": "writing-and-communication",
+   "slash": "/meeting-analyzer"
+  },
+  {
+   "kind": "skill",
+   "name": "memory-agent",
+   "category": "memory-and-knowledge",
+   "slash": "/memory-agent"
+  },
+  {
+   "kind": "skill",
+   "name": "meta-ads-analyzer",
+   "category": "advertising-and-paid-media",
+   "slash": "/meta-ads-analyzer"
+  },
+  {
+   "kind": "skill",
+   "name": "meta-ads-launch-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/meta-ads-launch-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "metrics-tracking",
+   "category": "product-management",
+   "slash": "/metrics-tracking"
+  },
+  {
+   "kind": "skill",
+   "name": "microinteractions",
+   "category": "design-and-ui",
+   "slash": "/microinteractions"
+  },
+  {
+   "kind": "skill",
+   "name": "miro",
+   "category": "integrations-and-apis",
+   "slash": "/miro"
+  },
+  {
+   "kind": "skill",
+   "name": "mobile-overlays",
+   "category": "design-and-ui",
+   "slash": "/mobile-overlays"
+  },
+  {
+   "kind": "skill",
+   "name": "moodboard",
+   "category": "design-and-ui",
+   "slash": "/moodboard"
+  },
+  {
+   "kind": "skill",
+   "name": "multi-model-gateway",
+   "category": "integrations-and-apis",
+   "slash": "/multi-model-gateway"
+  },
+  {
+   "kind": "skill",
+   "name": "n8n",
+   "category": "integrations-and-apis",
+   "slash": "/n8n"
+  },
+  {
+   "kind": "skill",
+   "name": "nano-banana-pro",
+   "category": "video-and-media",
+   "slash": "/nano-banana-pro"
+  },
+  {
+   "kind": "skill",
+   "name": "notebooklm",
+   "category": "memory-and-knowledge",
+   "slash": "/notebooklm"
+  },
+  {
+   "kind": "skill",
+   "name": "ocr-restore",
+   "category": "documents-and-office",
+   "slash": "/ocr-restore"
+  },
+  {
+   "kind": "skill",
+   "name": "offers-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/offers-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "onboarding-cro-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/onboarding-cro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "onboarding-ux",
+   "category": "design-and-ui",
+   "slash": "/onboarding-ux"
+  },
+  {
+   "kind": "skill",
+   "name": "openai-dalle",
+   "category": "integrations-and-apis",
+   "slash": "/openai-dalle"
+  },
+  {
+   "kind": "skill",
+   "name": "openwiki",
+   "category": "development",
+   "slash": "/openwiki"
+  },
+  {
+   "kind": "skill",
+   "name": "osint-recon",
+   "category": "security",
+   "slash": "/osint-recon"
+  },
+  {
+   "kind": "skill",
+   "name": "page-cro-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/page-cro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "parse-git-status",
+   "category": "git-and-workflow",
+   "slash": "/parse-git-status"
+  },
+  {
+   "kind": "skill",
+   "name": "paywall-cro-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/paywall-cro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "pdf",
+   "category": "documents-and-office",
+   "slash": "/pdf"
+  },
+  {
+   "kind": "skill",
+   "name": "perf-audit",
+   "category": "code-quality-and-review",
+   "slash": "/perf-audit"
+  },
+  {
+   "kind": "skill",
+   "name": "performance-analytics",
+   "category": "marketing",
+   "slash": "/performance-analytics"
+  },
+  {
+   "kind": "skill",
+   "name": "perplexity",
+   "category": "integrations-and-apis",
+   "slash": "/perplexity"
+  },
+  {
+   "kind": "skill",
+   "name": "pgvector-rag",
+   "category": "development",
+   "slash": "/pgvector-rag"
+  },
+  {
+   "kind": "skill",
+   "name": "pinecone",
+   "category": "integrations-and-apis",
+   "slash": "/pinecone"
+  },
+  {
+   "kind": "skill",
+   "name": "placeholders",
+   "category": "design-and-ui",
+   "slash": "/placeholders"
+  },
+  {
+   "kind": "skill",
+   "name": "playwright-automation",
+   "category": "browser-and-automation",
+   "slash": "/playwright-automation"
+  },
+  {
+   "kind": "skill",
+   "name": "popup-cro-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/popup-cro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "postiz",
+   "category": "integrations-and-apis",
+   "slash": "/postiz"
+  },
+  {
+   "kind": "skill",
+   "name": "pptx",
+   "category": "presentations",
+   "slash": "/pptx"
+  },
+  {
+   "kind": "skill",
+   "name": "pptx-editable-extractor",
+   "category": "presentations",
+   "slash": "/pptx-editable-extractor"
+  },
+  {
+   "kind": "skill",
+   "name": "pptx-import",
+   "category": "presentations",
+   "slash": "/pptx-import"
+  },
+  {
+   "kind": "skill",
+   "name": "pr-outreach-ru",
+   "category": "marketing",
+   "slash": "/pr-outreach-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "pricelist-latin-check",
+   "category": "documents-and-office",
+   "slash": "/pricelist-latin-check"
+  },
+  {
+   "kind": "skill",
+   "name": "pricing-strategy-ru",
+   "category": "conversion-and-funnels",
+   "slash": "/pricing-strategy-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "print-styles",
+   "category": "prototyping-and-web-build",
+   "slash": "/print-styles"
+  },
+  {
+   "kind": "skill",
+   "name": "privacy-filter",
+   "category": "security",
+   "slash": "/privacy-filter"
+  },
+  {
+   "kind": "skill",
+   "name": "prompt-engineering",
+   "category": "agent-and-skill-development",
+   "slash": "/prompt-engineering"
+  },
+  {
+   "kind": "skill",
+   "name": "proto-smoketest",
+   "category": "code-quality-and-review",
+   "slash": "/proto-smoketest"
+  },
+  {
+   "kind": "skill",
+   "name": "publora-post",
+   "category": "integrations-and-apis",
+   "slash": "/publora-post"
+  },
+  {
+   "kind": "skill",
+   "name": "pwa-shell",
+   "category": "prototyping-and-web-build",
+   "slash": "/pwa-shell"
+  },
+  {
+   "kind": "skill",
+   "name": "python-fullstack-dev",
+   "category": "development",
+   "slash": "/python-fullstack-dev"
+  },
+  {
+   "kind": "skill",
+   "name": "questions-protocol",
+   "category": "planning-and-execution",
+   "slash": "/questions-protocol"
+  },
+  {
+   "kind": "skill",
+   "name": "rbc-post",
+   "category": "writing-and-communication",
+   "slash": "/rbc-post"
+  },
+  {
+   "kind": "skill",
+   "name": "react-pinning",
+   "category": "prototyping-and-web-build",
+   "slash": "/react-pinning"
+  },
+  {
+   "kind": "skill",
+   "name": "real-data",
+   "category": "prototyping-and-web-build",
+   "slash": "/real-data"
+  },
+  {
+   "kind": "skill",
+   "name": "reddit-hn",
+   "category": "analytics-and-data",
+   "slash": "/reddit-hn"
+  },
+  {
+   "kind": "skill",
+   "name": "referrals-ru",
+   "category": "marketing",
+   "slash": "/referrals-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "replicate",
+   "category": "integrations-and-apis",
+   "slash": "/replicate"
+  },
+  {
+   "kind": "skill",
+   "name": "research-docs",
+   "category": "documents-and-office",
+   "slash": "/research-docs"
+  },
+  {
+   "kind": "skill",
+   "name": "review-animations",
+   "category": "design-and-ui",
+   "slash": "/review-animations"
+  },
+  {
+   "kind": "skill",
+   "name": "revops-ru",
+   "category": "sales-and-crm",
+   "slash": "/revops-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "roadmap-management",
+   "category": "product-management",
+   "slash": "/roadmap-management"
+  },
+  {
+   "kind": "skill",
+   "name": "rollback-changes",
+   "category": "git-and-workflow",
+   "slash": "/rollback-changes"
+  },
+  {
+   "kind": "skill",
+   "name": "romance-novel-pipeline",
+   "category": "writing-and-communication",
+   "slash": "/romance-novel-pipeline"
+  },
+  {
+   "kind": "skill",
+   "name": "ru-text",
+   "category": "writing-and-communication",
+   "slash": "/ru-text"
+  },
+  {
+   "kind": "skill",
+   "name": "run-quality-gate",
+   "category": "code-quality-and-review",
+   "slash": "/run-quality-gate"
+  },
+  {
+   "kind": "skill",
+   "name": "sales-enablement-ru",
+   "category": "sales-and-crm",
+   "slash": "/sales-enablement-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "sales-team-ru",
+   "category": "sales-and-crm",
+   "slash": "/sales-team-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "save-knowledge-base",
+   "category": "memory-and-knowledge",
+   "slash": "/save-knowledge-base"
+  },
+  {
+   "kind": "skill",
+   "name": "scaling-stage",
+   "category": "presentations",
+   "slash": "/scaling-stage"
+  },
+  {
+   "kind": "skill",
+   "name": "schema-markup-ru",
+   "category": "marketing",
+   "slash": "/schema-markup-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "screen-labels",
+   "category": "prototyping-and-web-build",
+   "slash": "/screen-labels"
+  },
+  {
+   "kind": "skill",
+   "name": "screenshot-test",
+   "category": "code-quality-and-review",
+   "slash": "/screenshot-test"
+  },
+  {
+   "kind": "skill",
+   "name": "sdat",
+   "category": "integrations-and-apis",
+   "slash": "/sdat"
+  },
+  {
+   "kind": "skill",
+   "name": "security-audit",
+   "category": "security",
+   "slash": "/security-audit"
+  },
+  {
+   "kind": "skill",
+   "name": "self-reflect",
+   "category": "thinking-and-methodology",
+   "slash": "/self-reflect"
+  },
+  {
+   "kind": "skill",
+   "name": "seo-machine-ru",
+   "category": "marketing",
+   "slash": "/seo-machine-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "serpapi",
+   "category": "analytics-and-data",
+   "slash": "/serpapi"
+  },
+  {
+   "kind": "skill",
+   "name": "session-mentor",
+   "category": "memory-and-knowledge",
+   "slash": "/session-mentor"
+  },
+  {
+   "kind": "skill",
+   "name": "sharing-skills",
+   "category": "agent-and-skill-development",
+   "slash": "/sharing-skills"
+  },
+  {
+   "kind": "skill",
+   "name": "shorts-pipeline",
+   "category": "video-and-media",
+   "slash": "/shorts-pipeline"
+  },
+  {
+   "kind": "skill",
+   "name": "similarweb-analytics",
+   "category": "analytics-and-data",
+   "slash": "/similarweb-analytics"
+  },
+  {
+   "kind": "skill",
+   "name": "sketch-to-html",
+   "category": "prototyping-and-web-build",
+   "slash": "/sketch-to-html"
+  },
+  {
+   "kind": "skill",
+   "name": "skill-audit",
+   "category": "security",
+   "slash": "/skill-audit"
+  },
+  {
+   "kind": "skill",
+   "name": "skill-creator",
+   "category": "agent-and-skill-development",
+   "slash": "/skill-creator"
+  },
+  {
+   "kind": "skill",
+   "name": "slack-gif-creator",
+   "category": "video-and-media",
+   "slash": "/slack-gif-creator"
+  },
+  {
+   "kind": "skill",
+   "name": "slides",
+   "category": "presentations",
+   "slash": "/slides"
+  },
+  {
+   "kind": "skill",
+   "name": "sms-twilio",
+   "category": "integrations-and-apis",
+   "slash": "/sms-twilio"
+  },
+  {
+   "kind": "skill",
+   "name": "social-intel",
+   "category": "sales-and-crm",
+   "slash": "/social-intel"
+  },
+  {
+   "kind": "skill",
+   "name": "stakeholder-comms",
+   "category": "writing-and-communication",
+   "slash": "/stakeholder-comms"
+  },
+  {
+   "kind": "skill",
+   "name": "standalone-html",
+   "category": "prototyping-and-web-build",
+   "slash": "/standalone-html"
+  },
+  {
+   "kind": "skill",
+   "name": "states-checklist",
+   "category": "design-and-ui",
+   "slash": "/states-checklist"
+  },
+  {
+   "kind": "skill",
+   "name": "sticker-pack-generator",
+   "category": "video-and-media",
+   "slash": "/sticker-pack-generator"
+  },
+  {
+   "kind": "skill",
+   "name": "stock-analysis",
+   "category": "analytics-and-data",
+   "slash": "/stock-analysis"
+  },
+  {
+   "kind": "skill",
+   "name": "storybook-bridge",
+   "category": "prototyping-and-web-build",
+   "slash": "/storybook-bridge"
+  },
+  {
+   "kind": "skill",
+   "name": "submagic",
+   "category": "video-and-media",
+   "slash": "/submagic"
+  },
+  {
+   "kind": "skill",
+   "name": "tapestry",
+   "category": "memory-and-knowledge",
+   "slash": "/tapestry"
+  },
+  {
+   "kind": "skill",
+   "name": "telegram-ads-pro-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/telegram-ads-pro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "telegram-bot-toolkit",
+   "category": "development",
+   "slash": "/telegram-bot-toolkit"
+  },
+  {
+   "kind": "skill",
+   "name": "tender-search-ru",
+   "category": "sales-and-crm",
+   "slash": "/tender-search-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "text-to-lottie",
+   "category": "design-and-ui",
+   "slash": "/text-to-lottie"
+  },
+  {
+   "kind": "skill",
+   "name": "tg-bot-publish",
+   "category": "integrations-and-apis",
+   "slash": "/tg-bot-publish"
+  },
+  {
+   "kind": "skill",
+   "name": "tg-channel-buyout-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/tg-channel-buyout-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "tg-post",
+   "category": "writing-and-communication",
+   "slash": "/tg-post"
+  },
+  {
+   "kind": "skill",
+   "name": "theme-factory",
+   "category": "design-and-ui",
+   "slash": "/theme-factory"
+  },
+  {
+   "kind": "skill",
+   "name": "thinking-frameworks",
+   "category": "thinking-and-methodology",
+   "slash": "/thinking-frameworks"
+  },
+  {
+   "kind": "skill",
+   "name": "threat-hunting",
+   "category": "security",
+   "slash": "/threat-hunting"
+  },
+  {
+   "kind": "skill",
+   "name": "tiktok-intel",
+   "category": "analytics-and-data",
+   "slash": "/tiktok-intel"
+  },
+  {
+   "kind": "skill",
+   "name": "tilda",
+   "category": "integrations-and-apis",
+   "slash": "/tilda"
+  },
+  {
+   "kind": "skill",
+   "name": "tilda-bitrix-e2e-test",
+   "category": "browser-and-automation",
+   "slash": "/tilda-bitrix-e2e-test"
+  },
+  {
+   "kind": "skill",
+   "name": "tool-search-protocol",
+   "category": "agent-and-skill-development",
+   "slash": "/tool-search-protocol"
+  },
+  {
+   "kind": "skill",
+   "name": "trend-engine",
+   "category": "analytics-and-data",
+   "slash": "/trend-engine"
+  },
+  {
+   "kind": "skill",
+   "name": "tweaks-panel",
+   "category": "prototyping-and-web-build",
+   "slash": "/tweaks-panel"
+  },
+  {
+   "kind": "skill",
+   "name": "type-scale",
+   "category": "design-and-ui",
+   "slash": "/type-scale"
+  },
+  {
+   "kind": "skill",
+   "name": "user-research-synthesis",
+   "category": "product-management",
+   "slash": "/user-research-synthesis"
+  },
+  {
+   "kind": "skill",
+   "name": "validate-plan-file",
+   "category": "planning-and-execution",
+   "slash": "/validate-plan-file"
+  },
+  {
+   "kind": "skill",
+   "name": "vc-post",
+   "category": "writing-and-communication",
+   "slash": "/vc-post"
+  },
+  {
+   "kind": "skill",
+   "name": "verifier",
+   "category": "code-quality-and-review",
+   "slash": "/verifier"
+  },
+  {
+   "kind": "skill",
+   "name": "version-snapshots",
+   "category": "git-and-workflow",
+   "slash": "/version-snapshots"
+  },
+  {
+   "kind": "skill",
+   "name": "video-downloader",
+   "category": "video-and-media",
+   "slash": "/video-downloader"
+  },
+  {
+   "kind": "skill",
+   "name": "video-editor",
+   "category": "video-and-media",
+   "slash": "/video-editor"
+  },
+  {
+   "kind": "skill",
+   "name": "video-export",
+   "category": "video-and-media",
+   "slash": "/video-export"
+  },
+  {
+   "kind": "skill",
+   "name": "video-factory-pipeline",
+   "category": "video-and-media",
+   "slash": "/video-factory-pipeline"
+  },
+  {
+   "kind": "skill",
+   "name": "video-generation",
+   "category": "video-and-media",
+   "slash": "/video-generation"
+  },
+  {
+   "kind": "skill",
+   "name": "video-montage",
+   "category": "video-and-media",
+   "slash": "/video-montage"
+  },
+  {
+   "kind": "skill",
+   "name": "video-shotcraft",
+   "category": "video-and-media",
+   "slash": "/video-shotcraft"
+  },
+  {
+   "kind": "skill",
+   "name": "viral-shorts-playbook",
+   "category": "video-and-media",
+   "slash": "/viral-shorts-playbook"
+  },
+  {
+   "kind": "skill",
+   "name": "visual-edit",
+   "category": "prototyping-and-web-build",
+   "slash": "/visual-edit"
+  },
+  {
+   "kind": "skill",
+   "name": "vk-ads-pro-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/vk-ads-pro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "void-video",
+   "category": "video-and-media",
+   "slash": "/void-video"
+  },
+  {
+   "kind": "skill",
+   "name": "watch-video",
+   "category": "video-and-media",
+   "slash": "/watch-video"
+  },
+  {
+   "kind": "skill",
+   "name": "web-artifacts-builder",
+   "category": "prototyping-and-web-build",
+   "slash": "/web-artifacts-builder"
+  },
+  {
+   "kind": "skill",
+   "name": "web-assets-generator",
+   "category": "design-and-ui",
+   "slash": "/web-assets-generator"
+  },
+  {
+   "kind": "skill",
+   "name": "webapp-testing",
+   "category": "browser-and-automation",
+   "slash": "/webapp-testing"
+  },
+  {
+   "kind": "skill",
+   "name": "webhook-receiver",
+   "category": "integrations-and-apis",
+   "slash": "/webhook-receiver"
+  },
+  {
+   "kind": "skill",
+   "name": "webinar-to-pdf",
+   "category": "documents-and-office",
+   "slash": "/webinar-to-pdf"
+  },
+  {
+   "kind": "skill",
+   "name": "website-creation",
+   "category": "prototyping-and-web-build",
+   "slash": "/website-creation"
+  },
+  {
+   "kind": "skill",
+   "name": "wireframe",
+   "category": "design-and-ui",
+   "slash": "/wireframe"
+  },
+  {
+   "kind": "skill",
+   "name": "xlsx",
+   "category": "documents-and-office",
+   "slash": "/xlsx"
+  },
+  {
+   "kind": "skill",
+   "name": "yandex",
+   "category": "integrations-and-apis",
+   "slash": "/yandex"
+  },
+  {
+   "kind": "skill",
+   "name": "yandex-direct-pro-ru",
+   "category": "advertising-and-paid-media",
+   "slash": "/yandex-direct-pro-ru"
+  },
+  {
+   "kind": "skill",
+   "name": "year-review",
+   "category": "memory-and-knowledge",
+   "slash": "/year-review"
+  },
+  {
+   "kind": "skill",
+   "name": "youtube-analytics",
+   "category": "analytics-and-data",
+   "slash": "/youtube-analytics"
+  },
+  {
+   "kind": "skill",
+   "name": "youtube-transcript",
+   "category": "audio-and-speech",
+   "slash": "/youtube-transcript"
+  },
+  {
+   "kind": "skill",
+   "name": "zoom",
+   "category": "integrations-and-apis",
+   "slash": "/zoom"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-browse",
+   "category": "browser-and-automation",
+   "slash": "/gstack-browse",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-document-release",
+   "category": "browser-and-automation",
+   "slash": "/gstack-document-release",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-upgrade",
+   "category": "browser-and-automation",
+   "slash": "/gstack-upgrade",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-plan-ceo-review",
+   "category": "browser-and-automation",
+   "slash": "/gstack-plan-ceo-review",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-plan-eng-review",
+   "category": "browser-and-automation",
+   "slash": "/gstack-plan-eng-review",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-qa",
+   "category": "browser-and-automation",
+   "slash": "/gstack-qa",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-qa-only",
+   "category": "browser-and-automation",
+   "slash": "/gstack-qa-only",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-retro",
+   "category": "browser-and-automation",
+   "slash": "/gstack-retro",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-review",
+   "category": "browser-and-automation",
+   "slash": "/gstack-review",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-setup-browser-cookies",
+   "category": "browser-and-automation",
+   "slash": "/gstack-setup-browser-cookies",
+   "parent": "gstack"
+  },
+  {
+   "kind": "nested-skill",
+   "name": "gstack-ship",
+   "category": "browser-and-automation",
+   "slash": "/gstack-ship",
+   "parent": "gstack"
+  },
+  {
+   "kind": "command",
+   "name": "add-auth",
+   "category": "commands",
+   "slash": "/add-auth",
+   "source": "commands/add-auth.md"
+  },
+  {
+   "kind": "command",
+   "name": "analyze",
+   "category": "commands",
+   "slash": "/analyze",
+   "source": "commands/analyze.md"
+  },
+  {
+   "kind": "command",
+   "name": "beads-init",
+   "category": "commands",
+   "slash": "/beads-init",
+   "source": "commands/beads-init.md"
+  },
+  {
+   "kind": "command",
+   "name": "bot-debug",
+   "category": "commands",
+   "slash": "/bot-debug",
+   "source": "commands/bot-debug.md"
+  },
+  {
+   "kind": "command",
+   "name": "bot-deploy",
+   "category": "commands",
+   "slash": "/bot-deploy",
+   "source": "commands/bot-deploy.md"
+  },
+  {
+   "kind": "command",
+   "name": "bot-test",
+   "category": "commands",
+   "slash": "/bot-test",
+   "source": "commands/bot-test.md"
+  },
+  {
+   "kind": "command",
+   "name": "brand-review",
+   "category": "commands",
+   "slash": "/brand-review",
+   "source": "commands/brand-review.md"
+  },
+  {
+   "kind": "command",
+   "name": "bug-triage",
+   "category": "code-health",
+   "slash": "/bug-triage",
+   "source": "commands/bug-triage.md"
+  },
+  {
+   "kind": "command",
+   "name": "call-summary",
+   "category": "commands",
+   "slash": "/call-summary",
+   "source": "commands/call-summary.md"
+  },
+  {
+   "kind": "command",
+   "name": "campaign-plan",
+   "category": "commands",
+   "slash": "/campaign-plan",
+   "source": "commands/campaign-plan.md"
+  },
+  {
+   "kind": "command",
+   "name": "changelog",
+   "category": "commands",
+   "slash": "/changelog",
+   "source": "commands/changelog.md"
+  },
+  {
+   "kind": "command",
+   "name": "code-review",
+   "category": "commands",
+   "slash": "/code-review",
+   "source": "commands/code-review.md"
+  },
+  {
+   "kind": "command",
+   "name": "competitive-brief-mktg",
+   "category": "commands",
+   "slash": "/competitive-brief-mktg",
+   "source": "commands/competitive-brief-mktg.md"
+  },
+  {
+   "kind": "command",
+   "name": "competitive-brief",
+   "category": "commands",
+   "slash": "/competitive-brief",
+   "source": "commands/competitive-brief.md"
+  },
+  {
+   "kind": "command",
+   "name": "context-optimize",
+   "category": "commands",
+   "slash": "/context-optimize",
+   "source": "commands/context-optimize.md"
+  },
+  {
+   "kind": "command",
+   "name": "daily",
+   "category": "commands",
+   "slash": "/daily",
+   "source": "commands/daily.md"
+  },
+  {
+   "kind": "command",
+   "name": "deep-research",
+   "category": "commands",
+   "slash": "/deep-research",
+   "source": "commands/deep-research.md"
+  },
+  {
+   "kind": "command",
+   "name": "deploy",
+   "category": "commands",
+   "slash": "/deploy",
+   "source": "commands/deploy.md"
+  },
+  {
+   "kind": "command",
+   "name": "docs",
+   "category": "commands",
+   "slash": "/docs",
+   "source": "commands/docs.md"
+  },
+  {
+   "kind": "command",
+   "name": "domain-dns-ops",
+   "category": "commands",
+   "slash": "/domain-dns-ops",
+   "source": "commands/domain-dns-ops.md"
+  },
+  {
+   "kind": "command",
+   "name": "draft-content",
+   "category": "commands",
+   "slash": "/draft-content",
+   "source": "commands/draft-content.md"
+  },
+  {
+   "kind": "command",
+   "name": "email-sequence",
+   "category": "commands",
+   "slash": "/email-sequence",
+   "source": "commands/email-sequence.md"
+  },
+  {
+   "kind": "command",
+   "name": "estimate",
+   "category": "commands",
+   "slash": "/estimate",
+   "source": "commands/estimate.md"
+  },
+  {
+   "kind": "command",
+   "name": "feature-cycle",
+   "category": "commands",
+   "slash": "/feature-cycle",
+   "source": "commands/feature-cycle.md"
+  },
+  {
+   "kind": "command",
+   "name": "forecast",
+   "category": "commands",
+   "slash": "/forecast",
+   "source": "commands/forecast.md"
+  },
+  {
+   "kind": "command",
+   "name": "gads",
+   "category": "commands",
+   "slash": "/gads",
+   "source": "commands/gads.md"
+  },
+  {
+   "kind": "command",
+   "name": "ganalytics",
+   "category": "commands",
+   "slash": "/ganalytics",
+   "source": "commands/ganalytics.md"
+  },
+  {
+   "kind": "command",
+   "name": "gcalendar",
+   "category": "commands",
+   "slash": "/gcalendar",
+   "source": "commands/gcalendar.md"
+  },
+  {
+   "kind": "command",
+   "name": "gchat",
+   "category": "commands",
+   "slash": "/gchat",
+   "source": "commands/gchat.md"
+  },
+  {
+   "kind": "command",
+   "name": "gcloud-storage",
+   "category": "commands",
+   "slash": "/gcloud-storage",
+   "source": "commands/gcloud-storage.md"
+  },
+  {
+   "kind": "command",
+   "name": "gcontacts",
+   "category": "commands",
+   "slash": "/gcontacts",
+   "source": "commands/gcontacts.md"
+  },
+  {
+   "kind": "command",
+   "name": "gdocs",
+   "category": "commands",
+   "slash": "/gdocs",
+   "source": "commands/gdocs.md"
+  },
+  {
+   "kind": "command",
+   "name": "gdrive",
+   "category": "commands",
+   "slash": "/gdrive",
+   "source": "commands/gdrive.md"
+  },
+  {
+   "kind": "command",
+   "name": "generate-api",
+   "category": "commands",
+   "slash": "/generate-api",
+   "source": "commands/generate-api.md"
+  },
+  {
+   "kind": "command",
+   "name": "gmail",
+   "category": "commands",
+   "slash": "/gmail",
+   "source": "commands/gmail.md"
+  },
+  {
+   "kind": "command",
+   "name": "gmeet",
+   "category": "commands",
+   "slash": "/gmeet",
+   "source": "commands/gmeet.md"
+  },
+  {
+   "kind": "command",
+   "name": "gsearch-console",
+   "category": "commands",
+   "slash": "/gsearch-console",
+   "source": "commands/gsearch-console.md"
+  },
+  {
+   "kind": "command",
+   "name": "gsheets",
+   "category": "commands",
+   "slash": "/gsheets",
+   "source": "commands/gsheets.md"
+  },
+  {
+   "kind": "command",
+   "name": "gtasks",
+   "category": "commands",
+   "slash": "/gtasks",
+   "source": "commands/gtasks.md"
+  },
+  {
+   "kind": "command",
+   "name": "gtd",
+   "category": "commands",
+   "slash": "/gtd",
+   "source": "commands/gtd.md"
+  },
+  {
+   "kind": "command",
+   "name": "gtranslate",
+   "category": "commands",
+   "slash": "/gtranslate",
+   "source": "commands/gtranslate.md"
+  },
+  {
+   "kind": "command",
+   "name": "health-bugs",
+   "category": "code-health",
+   "slash": "/health-bugs",
+   "source": "commands/health-bugs.md"
+  },
+  {
+   "kind": "command",
+   "name": "health-cleanup",
+   "category": "code-health",
+   "slash": "/health-cleanup",
+   "source": "commands/health-cleanup.md"
+  },
+  {
+   "kind": "command",
+   "name": "health-deps",
+   "category": "code-health",
+   "slash": "/health-deps",
+   "source": "commands/health-deps.md"
+  },
+  {
+   "kind": "command",
+   "name": "health-reuse",
+   "category": "code-health",
+   "slash": "/health-reuse",
+   "source": "commands/health-reuse.md"
+  },
+  {
+   "kind": "command",
+   "name": "health-security",
+   "category": "code-health",
+   "slash": "/health-security",
+   "source": "commands/health-security.md"
+  },
+  {
+   "kind": "command",
+   "name": "init-project",
+   "category": "commands",
+   "slash": "/init-project",
+   "source": "commands/init-project.md"
+  },
+  {
+   "kind": "command",
+   "name": "kb",
+   "category": "commands",
+   "slash": "/kb",
+   "source": "commands/kb.md"
+  },
+  {
+   "kind": "command",
+   "name": "kimi-reasoning",
+   "category": "commands",
+   "slash": "/kimi-reasoning",
+   "source": "commands/kimi-reasoning.md"
+  },
+  {
+   "kind": "command",
+   "name": "manus-cmd",
+   "category": "integrations-and-apis",
+   "slash": "/manus-cmd",
+   "source": "commands/manus.md"
+  },
+  {
+   "kind": "command",
+   "name": "meeting",
+   "category": "commands",
+   "slash": "/meeting",
+   "source": "commands/meeting.md"
+  },
+  {
+   "kind": "command",
+   "name": "memory-extract",
+   "category": "commands",
+   "slash": "/memory-extract",
+   "source": "commands/memory-extract.md"
+  },
+  {
+   "kind": "command",
+   "name": "memory-ingest",
+   "category": "commands",
+   "slash": "/memory-ingest",
+   "source": "commands/memory-ingest.md"
+  },
+  {
+   "kind": "command",
+   "name": "memory-learn",
+   "category": "commands",
+   "slash": "/memory-learn",
+   "source": "commands/memory-learn.md"
+  },
+  {
+   "kind": "command",
+   "name": "memory-search",
+   "category": "commands",
+   "slash": "/memory-search",
+   "source": "commands/memory-search.md"
+  },
+  {
+   "kind": "command",
+   "name": "memory-stats",
+   "category": "commands",
+   "slash": "/memory-stats",
+   "source": "commands/memory-stats.md"
+  },
+  {
+   "kind": "command",
+   "name": "metrics-review",
+   "category": "commands",
+   "slash": "/metrics-review",
+   "source": "commands/metrics-review.md"
+  },
+  {
+   "kind": "command",
+   "name": "monitor-agents",
+   "category": "commands",
+   "slash": "/monitor-agents",
+   "source": "commands/monitor-agents.md"
+  },
+  {
+   "kind": "command",
+   "name": "orchestrate",
+   "category": "commands",
+   "slash": "/orchestrate",
+   "source": "commands/orchestrate.md"
+  },
+  {
+   "kind": "command",
+   "name": "outlook",
+   "category": "commands",
+   "slash": "/outlook",
+   "source": "commands/outlook.md"
+  },
+  {
+   "kind": "command",
+   "name": "parallel-dev",
+   "category": "commands",
+   "slash": "/parallel-dev",
+   "source": "commands/parallel-dev.md"
+  },
+  {
+   "kind": "command",
+   "name": "performance-report",
+   "category": "commands",
+   "slash": "/performance-report",
+   "source": "commands/performance-report.md"
+  },
+  {
+   "kind": "command",
+   "name": "performance",
+   "category": "commands",
+   "slash": "/performance",
+   "source": "commands/performance.md"
+  },
+  {
+   "kind": "command",
+   "name": "pipeline-review",
+   "category": "commands",
+   "slash": "/pipeline-review",
+   "source": "commands/pipeline-review.md"
+  },
+  {
+   "kind": "command",
+   "name": "plan-my-day",
+   "category": "commands",
+   "slash": "/plan-my-day",
+   "source": "commands/plan-my-day.md"
+  },
+  {
+   "kind": "command",
+   "name": "prompt-log",
+   "category": "commands",
+   "slash": "/prompt-log",
+   "source": "commands/prompt-log.md"
+  },
+  {
+   "kind": "command",
+   "name": "proofread",
+   "category": "commands",
+   "slash": "/proofread",
+   "source": "commands/proofread.md"
+  },
+  {
+   "kind": "command",
+   "name": "push",
+   "category": "commands",
+   "slash": "/push",
+   "source": "commands/push.md"
+  },
+  {
+   "kind": "command",
+   "name": "quick-deploy",
+   "category": "commands",
+   "slash": "/quick-deploy",
+   "source": "commands/quick-deploy.md"
+  },
+  {
+   "kind": "command",
+   "name": "rename-sessions",
+   "category": "commands",
+   "slash": "/rename-sessions",
+   "source": "commands/rename-sessions.md"
+  },
+  {
+   "kind": "command",
+   "name": "retro",
+   "category": "browser-and-automation",
+   "slash": "/retro",
+   "source": "commands/retro.md"
+  },
+  {
+   "kind": "command",
+   "name": "review",
+   "category": "browser-and-automation",
+   "slash": "/review",
+   "source": "commands/review.md"
+  },
+  {
+   "kind": "command",
+   "name": "roadmap-update",
+   "category": "commands",
+   "slash": "/roadmap-update",
+   "source": "commands/roadmap-update.md"
+  },
+  {
+   "kind": "command",
+   "name": "roadmap",
+   "category": "commands",
+   "slash": "/roadmap",
+   "source": "commands/roadmap.md"
+  },
+  {
+   "kind": "command",
+   "name": "scaffold",
+   "category": "commands",
+   "slash": "/scaffold",
+   "source": "commands/scaffold.md"
+  },
+  {
+   "kind": "command",
+   "name": "search-chats",
+   "category": "commands",
+   "slash": "/search-chats",
+   "source": "commands/search-chats.md"
+  },
+  {
+   "kind": "command",
+   "name": "security-scan",
+   "category": "commands",
+   "slash": "/security-scan",
+   "source": "commands/security-scan.md"
+  },
+  {
+   "kind": "command",
+   "name": "self-learn",
+   "category": "commands",
+   "slash": "/self-learn",
+   "source": "commands/self-learn.md"
+  },
+  {
+   "kind": "command",
+   "name": "seo-audit",
+   "category": "commands",
+   "slash": "/seo-audit",
+   "source": "commands/seo-audit.md"
+  },
+  {
+   "kind": "command",
+   "name": "setup-db",
+   "category": "commands",
+   "slash": "/setup-db",
+   "source": "commands/setup-db.md"
+  },
+  {
+   "kind": "command",
+   "name": "slides-cmd",
+   "category": "presentations",
+   "slash": "/slides-cmd",
+   "source": "commands/slides.md"
+  },
+  {
+   "kind": "command",
+   "name": "specs",
+   "category": "commands",
+   "slash": "/specs",
+   "source": "commands/specs.md"
+  },
+  {
+   "kind": "command",
+   "name": "sprint-planning-pm",
+   "category": "commands",
+   "slash": "/sprint-planning-pm",
+   "source": "commands/sprint-planning-pm.md"
+  },
+  {
+   "kind": "command",
+   "name": "sprint-planning",
+   "category": "commands",
+   "slash": "/sprint-planning",
+   "source": "commands/sprint-planning.md"
+  },
+  {
+   "kind": "command",
+   "name": "stakeholder-update",
+   "category": "commands",
+   "slash": "/stakeholder-update",
+   "source": "commands/stakeholder-update.md"
+  },
+  {
+   "kind": "command",
+   "name": "standup-report",
+   "category": "commands",
+   "slash": "/standup-report",
+   "source": "commands/standup-report.md"
+  },
+  {
+   "kind": "command",
+   "name": "start-feature",
+   "category": "commands",
+   "slash": "/start-feature",
+   "source": "commands/start-feature.md"
+  },
+  {
+   "kind": "command",
+   "name": "synthesize-research",
+   "category": "commands",
+   "slash": "/synthesize-research",
+   "source": "commands/synthesize-research.md"
+  },
+  {
+   "kind": "command",
+   "name": "test-frontend",
+   "category": "commands",
+   "slash": "/test-frontend",
+   "source": "commands/test-frontend.md"
+  },
+  {
+   "kind": "command",
+   "name": "transcribe",
+   "category": "commands",
+   "slash": "/transcribe",
+   "source": "commands/transcribe.md"
+  },
+  {
+   "kind": "command",
+   "name": "translate",
+   "category": "commands",
+   "slash": "/translate",
+   "source": "commands/translate.md"
+  },
+  {
+   "kind": "command",
+   "name": "ultra-think",
+   "category": "commands",
+   "slash": "/ultra-think",
+   "source": "commands/ultra-think.md"
+  },
+  {
+   "kind": "command",
+   "name": "userflow",
+   "category": "commands",
+   "slash": "/userflow",
+   "source": "commands/userflow.md"
+  },
+  {
+   "kind": "command",
+   "name": "video-factory",
+   "category": "commands",
+   "slash": "/video-factory",
+   "source": "commands/video-factory.md"
+  },
+  {
+   "kind": "command",
+   "name": "weekly-synthesis",
+   "category": "commands",
+   "slash": "/weekly-synthesis",
+   "source": "commands/weekly-synthesis.md"
+  },
+  {
+   "kind": "command",
+   "name": "worktree",
+   "category": "commands",
+   "slash": "/worktree",
+   "source": "commands/worktree.md"
+  },
+  {
+   "kind": "command",
+   "name": "write-spec",
+   "category": "commands",
+   "slash": "/write-spec",
+   "source": "commands/write-spec.md"
+  },
+  {
+   "kind": "command",
+   "name": "youtube-upload",
+   "category": "commands",
+   "slash": "/youtube-upload",
+   "source": "commands/youtube-upload.md"
+  },
+  {
+   "kind": "agent",
+   "name": "backend-dev",
+   "skill_view": "ccpack:backend-dev",
+   "source": "agents/backend-dev.md"
+  },
+  {
+   "kind": "agent",
+   "name": "book-fact-checker",
+   "skill_view": "ccpack:book-fact-checker",
+   "source": "agents/book-fact-checker.md"
+  },
+  {
+   "kind": "agent",
+   "name": "business-analyst",
+   "skill_view": "ccpack:business-analyst",
+   "source": "agents/business-analyst.md"
+  },
+  {
+   "kind": "agent",
+   "name": "code-reviewer",
+   "skill_view": "ccpack:code-reviewer",
+   "source": "agents/code-reviewer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "devops-engineer",
+   "skill_view": "ccpack:devops-engineer",
+   "source": "agents/devops-engineer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "error-handler",
+   "skill_view": "ccpack:error-handler",
+   "source": "agents/error-handler.md"
+  },
+  {
+   "kind": "agent",
+   "name": "frontend-dev",
+   "skill_view": "ccpack:frontend-dev",
+   "source": "agents/frontend-dev.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gemini-agent",
+   "skill_view": "ccpack:gemini-agent",
+   "source": "agents/gemini-agent.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gpt-agent",
+   "skill_view": "ccpack:gpt-agent",
+   "source": "agents/gpt-agent.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-advisor-researcher",
+   "skill_view": "ccpack:gsd-advisor-researcher",
+   "source": "agents/gsd-advisor-researcher.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-assumptions-analyzer",
+   "skill_view": "ccpack:gsd-assumptions-analyzer",
+   "source": "agents/gsd-assumptions-analyzer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-codebase-mapper",
+   "skill_view": "ccpack:gsd-codebase-mapper",
+   "source": "agents/gsd-codebase-mapper.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-debugger",
+   "skill_view": "ccpack:gsd-debugger",
+   "source": "agents/gsd-debugger.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-executor",
+   "skill_view": "ccpack:gsd-executor",
+   "source": "agents/gsd-executor.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-integration-checker",
+   "skill_view": "ccpack:gsd-integration-checker",
+   "source": "agents/gsd-integration-checker.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-nyquist-auditor",
+   "skill_view": "ccpack:gsd-nyquist-auditor",
+   "source": "agents/gsd-nyquist-auditor.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-phase-researcher",
+   "skill_view": "ccpack:gsd-phase-researcher",
+   "source": "agents/gsd-phase-researcher.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-plan-checker",
+   "skill_view": "ccpack:gsd-plan-checker",
+   "source": "agents/gsd-plan-checker.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-planner",
+   "skill_view": "ccpack:gsd-planner",
+   "source": "agents/gsd-planner.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-project-researcher",
+   "skill_view": "ccpack:gsd-project-researcher",
+   "source": "agents/gsd-project-researcher.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-research-synthesizer",
+   "skill_view": "ccpack:gsd-research-synthesizer",
+   "source": "agents/gsd-research-synthesizer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-roadmapper",
+   "skill_view": "ccpack:gsd-roadmapper",
+   "source": "agents/gsd-roadmapper.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-ui-auditor",
+   "skill_view": "ccpack:gsd-ui-auditor",
+   "source": "agents/gsd-ui-auditor.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-ui-checker",
+   "skill_view": "ccpack:gsd-ui-checker",
+   "source": "agents/gsd-ui-checker.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-ui-researcher",
+   "skill_view": "ccpack:gsd-ui-researcher",
+   "source": "agents/gsd-ui-researcher.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-user-profiler",
+   "skill_view": "ccpack:gsd-user-profiler",
+   "source": "agents/gsd-user-profiler.md"
+  },
+  {
+   "kind": "agent",
+   "name": "gsd-verifier",
+   "skill_view": "ccpack:gsd-verifier",
+   "source": "agents/gsd-verifier.md"
+  },
+  {
+   "kind": "agent",
+   "name": "bug-fixer",
+   "skill_view": "ccpack:bug-fixer",
+   "source": "agents/health/workers/bug-fixer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "bug-hunter",
+   "skill_view": "ccpack:bug-hunter",
+   "source": "agents/health/workers/bug-hunter.md"
+  },
+  {
+   "kind": "agent",
+   "name": "dead-code-hunter",
+   "skill_view": "ccpack:dead-code-hunter",
+   "source": "agents/health/workers/dead-code-hunter.md"
+  },
+  {
+   "kind": "agent",
+   "name": "dead-code-remover",
+   "skill_view": "ccpack:dead-code-remover",
+   "source": "agents/health/workers/dead-code-remover.md"
+  },
+  {
+   "kind": "agent",
+   "name": "dependency-auditor",
+   "skill_view": "ccpack:dependency-auditor",
+   "source": "agents/health/workers/dependency-auditor.md"
+  },
+  {
+   "kind": "agent",
+   "name": "dependency-updater",
+   "skill_view": "ccpack:dependency-updater",
+   "source": "agents/health/workers/dependency-updater.md"
+  },
+  {
+   "kind": "agent",
+   "name": "reuse-fixer",
+   "skill_view": "ccpack:reuse-fixer",
+   "source": "agents/health/workers/reuse-fixer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "reuse-hunter",
+   "skill_view": "ccpack:reuse-hunter",
+   "source": "agents/health/workers/reuse-hunter.md"
+  },
+  {
+   "kind": "agent",
+   "name": "security-scanner",
+   "skill_view": "ccpack:security-scanner",
+   "source": "agents/health/workers/security-scanner.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vulnerability-fixer",
+   "skill_view": "ccpack:vulnerability-fixer",
+   "source": "agents/health/workers/vulnerability-fixer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "image-generator",
+   "skill_view": "ccpack:image-generator",
+   "source": "agents/image-generator.md"
+  },
+  {
+   "kind": "agent",
+   "name": "integration-dev",
+   "skill_view": "ccpack:integration-dev",
+   "source": "agents/integration-dev.md"
+  },
+  {
+   "kind": "agent",
+   "name": "kimi-algorithm-specialist",
+   "skill_view": "ccpack:kimi-algorithm-specialist",
+   "source": "agents/kimi-algorithm-specialist.md"
+  },
+  {
+   "kind": "agent",
+   "name": "legacy-modernizer",
+   "skill_view": "ccpack:legacy-modernizer",
+   "source": "agents/legacy-modernizer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "memory-agent",
+   "skill_view": "ccpack:memory-agent",
+   "source": "agents/memory-agent.md"
+  },
+  {
+   "kind": "agent",
+   "name": "meta-agent-v3",
+   "skill_view": "ccpack:meta-agent-v3",
+   "source": "agents/meta/workers/meta-agent-v3.md"
+  },
+  {
+   "kind": "agent",
+   "name": "ml-specialist",
+   "skill_view": "ccpack:ml-specialist",
+   "source": "agents/ml-specialist.md"
+  },
+  {
+   "kind": "agent",
+   "name": "orchestrator",
+   "skill_view": "ccpack:orchestrator",
+   "source": "agents/orchestrator.md"
+  },
+  {
+   "kind": "agent",
+   "name": "pentest-engineer",
+   "skill_view": "ccpack:pentest-engineer",
+   "source": "agents/pentest-engineer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "presentation-master",
+   "skill_view": "ccpack:presentation-master",
+   "source": "agents/presentation-master.md"
+  },
+  {
+   "kind": "agent",
+   "name": "product-designer",
+   "skill_view": "ccpack:product-designer",
+   "source": "agents/product-designer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "prompt-engineer",
+   "skill_view": "ccpack:prompt-engineer",
+   "source": "agents/prompt-engineer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "proofreader-ortho",
+   "skill_view": "ccpack:proofreader-ortho",
+   "source": "agents/proofreader-ortho.md"
+  },
+  {
+   "kind": "agent",
+   "name": "proofreader-punctuation",
+   "skill_view": "ccpack:proofreader-punctuation",
+   "source": "agents/proofreader-punctuation.md"
+  },
+  {
+   "kind": "agent",
+   "name": "proofreader-typography",
+   "skill_view": "ccpack:proofreader-typography",
+   "source": "agents/proofreader-typography.md"
+  },
+  {
+   "kind": "agent",
+   "name": "qa-specialist",
+   "skill_view": "ccpack:qa-specialist",
+   "source": "agents/qa-specialist.md"
+  },
+  {
+   "kind": "agent",
+   "name": "security-engineer",
+   "skill_view": "ccpack:security-engineer",
+   "source": "agents/security-engineer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "senior-developer",
+   "skill_view": "ccpack:senior-developer",
+   "source": "agents/senior-developer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "slide-designer",
+   "skill_view": "ccpack:slide-designer",
+   "source": "agents/slide-designer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "software-architect",
+   "skill_view": "ccpack:software-architect",
+   "source": "agents/software-architect.md"
+  },
+  {
+   "kind": "agent",
+   "name": "system-analyst",
+   "skill_view": "ccpack:system-analyst",
+   "source": "agents/system-analyst.md"
+  },
+  {
+   "kind": "agent",
+   "name": "tech-lead",
+   "skill_view": "ccpack:tech-lead",
+   "source": "agents/tech-lead.md"
+  },
+  {
+   "kind": "agent",
+   "name": "accessibility-tester",
+   "skill_view": "ccpack:accessibility-tester",
+   "source": "agents/testing/workers/accessibility-tester.md"
+  },
+  {
+   "kind": "agent",
+   "name": "integration-tester",
+   "skill_view": "ccpack:integration-tester",
+   "source": "agents/testing/workers/integration-tester.md"
+  },
+  {
+   "kind": "agent",
+   "name": "mobile-fixes-implementer",
+   "skill_view": "ccpack:mobile-fixes-implementer",
+   "source": "agents/testing/workers/mobile-fixes-implementer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "mobile-responsiveness-tester",
+   "skill_view": "ccpack:mobile-responsiveness-tester",
+   "source": "agents/testing/workers/mobile-responsiveness-tester.md"
+  },
+  {
+   "kind": "agent",
+   "name": "performance-optimizer",
+   "skill_view": "ccpack:performance-optimizer",
+   "source": "agents/testing/workers/performance-optimizer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "test-writer",
+   "skill_view": "ccpack:test-writer",
+   "source": "agents/testing/workers/test-writer.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-brief",
+   "skill_view": "ccpack:vf-brief",
+   "source": "agents/vf-brief.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-editor",
+   "skill_view": "ccpack:vf-editor",
+   "source": "agents/vf-editor.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-operator",
+   "skill_view": "ccpack:vf-operator",
+   "source": "agents/vf-operator.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-prompter",
+   "skill_view": "ccpack:vf-prompter",
+   "source": "agents/vf-prompter.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-qc",
+   "skill_view": "ccpack:vf-qc",
+   "source": "agents/vf-qc.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-screenwriter",
+   "skill_view": "ccpack:vf-screenwriter",
+   "source": "agents/vf-screenwriter.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-sound",
+   "skill_view": "ccpack:vf-sound",
+   "source": "agents/vf-sound.md"
+  },
+  {
+   "kind": "agent",
+   "name": "vf-storyboard",
+   "skill_view": "ccpack:vf-storyboard",
+   "source": "agents/vf-storyboard.md"
+  },
+  {
+   "kind": "agent",
+   "name": "video-factory",
+   "skill_view": "ccpack:video-factory",
+   "source": "agents/video-factory.md"
+  }
+ ]
+}
