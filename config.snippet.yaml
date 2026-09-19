@@ -32,7 +32,7 @@ delegation:
 #     args: ["-y", "@modelcontextprotocol/server-filesystem", "."]
 #   graph-memory:
 #     command: python
-#     args: ["${HOME}/.claude/mcps/graph-memory/server.py"]
+#     args: ["~/.hermes/ccpack/mcps/graph-memory/server.py"]
 #     env:
 #       PYTHONIOENCODING: utf-8
 #       PYTHONUTF8: 1
@@ -40,7 +40,7 @@ delegation:
 #     url: https://mcp.miro.com/
 #   playwright-live1:
 #     command: npx
-#     args: ["@playwright/mcp@0.0.78", "--user-data-dir", "${HOME}/.claude/pw-profiles/live1"]
+#     args: ["@playwright/mcp@0.0.78", "--user-data-dir", "~/.hermes/ccpack/pw-profiles/live1"]
 #   runway:
 #     command: python
-#     args: ["-u", "${HOME}/.claude/skills/video-generation/scripts/runway_mcp.py"]
+#     args: ["-u", "~/.hermes/skills/video-generation/scripts/runway_mcp.py"]
